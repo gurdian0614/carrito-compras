@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Item } from "./components/Item"
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+ return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main className="min-h-screen bg-gary-100 flex justify-center p-6">
+        <section className="w-full max-w-2xl bg-white rounded-xl shadow-md p-6 space-y-6">
+          <header className="border-b pb-4">
+            <h1 className="text-2xl font-bold text-gray-800">
+              🛒 Mi carrito
+            </h1>
+            <p className="text-sm text-gray-500">
+              Revisa tus productos antes de pagar
+            </p>
+          </header>
+          
+          <div className="space-y-4">
+            <Item nombreProducto="Coca Cola 3 Litros" />
+            <Item nombreProducto="Zambos" cantidad={10} />
+            <Item nombreProducto="Jugo de Naranja" cantidad={5} />
+          </div>
+
+          <footer className="border-t pt-4 flex justify-betwen items-center" />
+        </section>
+      </main>
     </>
   )
 }
