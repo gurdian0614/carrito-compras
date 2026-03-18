@@ -6,6 +6,7 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["@testing-library/jest-dom"], // Agrega los tipos de jest-dom para las pruebas y que typescript los reconozca
 
     /* Bundler mode */
     "moduleResolution": "bundler",
